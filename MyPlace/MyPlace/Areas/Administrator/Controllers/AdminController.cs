@@ -7,14 +7,20 @@ namespace MyPlace.Areas.Admin.Controllers
     using Microsoft.AspNetCore.Authorization;
     using MyPlace.DataModels;
     using MyPlace.Models.Account;
+    using MyPlace.Services.Contracts;
 
     [Area("Administrator")]
     public class AdminController : Controller
     {
+        private readonly IAdminService _adminService;
         private readonly SignInManager<User> _signIn;
 
-        public AdminController(SignInManager<User> signIn) =>
+        public AdminController(SignInManager<User> signIn, IAdminService adminService)
+        {
             _signIn = signIn;
+            _adminService = adminService;
+        }
+            
 
         [HttpGet]
         public IActionResult Register() => View();
@@ -39,6 +45,13 @@ namespace MyPlace.Areas.Admin.Controllers
                 return View("Register");
             }
             return View(model);
+        }
+
+        public async Task<IActionResult> Delete(int entityId, int commentId)
+        {
+            _adminService.Delete(entityId, commentId);
+            return RedirectToAction("Index", "Catalog", new { area = "" });
+
         }
     }
 }

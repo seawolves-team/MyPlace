@@ -70,6 +70,8 @@ namespace MyPlace
 
             // Add services
             services.AddScoped<ICatalogService, CatalogService>();
+            services.AddScoped<IAdminService, AdminService>();
+
             services.AddScoped<INoteService, NoteService>();
             services.AddScoped<INotesRepository, NotesRepository>();
             services.AddScoped<IUserEntitiesService, UserEntitiesService>();
