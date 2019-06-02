@@ -8,15 +8,14 @@ a.navbar-brand {
 /* Sticky footer styles
 -------------------------------------------------- */
 @media (min-width: 768px) {
-  html {
-    font-size: 16px;
-  }
+    html {
+        font-size: 16px;
+    }
 }
 
 p {
     margin-top: 15px;
-    color: #e5af0d;
-    font-weight: bold;
+    color: #5ce500;
 }
 
 h6 {
@@ -24,40 +23,42 @@ h6 {
 }
 
 .border-top {
-  border-top: 1px solid #e5e5e5;
+    border-top: 1px solid #e5e5e5;
 }
+
 .border-bottom {
-  border-bottom: 1px solid #e5e5e5;
+    border-bottom: 1px solid #e5e5e5;
 }
 
 .box-shadow {
-  box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
+    box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
 }
 
 button.accept-policy {
-  font-size: 1rem;
-  line-height: inherit;
+    font-size: 1rem;
+    line-height: inherit;
 }
 
 /* Sticky footer styles
 -------------------------------------------------- */
 html {
-  position: relative;
-  min-height: 100%;
+    position: relative;
+    min-height: 100%;
 }
 
 body {
-  /* Margin bottom by footer height */
-  margin-bottom: 60px;
+    /* Margin bottom by footer height */
+    margin-bottom: 60px;
 }
+
 .footer {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  white-space: nowrap;
-  /* Set the fixed height of the footer here */
-  height: 60px;
-  line-height: 60px; /* Vertically center the text there */
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    white-space: nowrap;
+    /* Set the fixed height of the footer here */
+    height: 60px;
+    line-height: 60px; /* Vertically center the text there */
 }
 
 
@@ -195,6 +196,7 @@ body {
     border-style: groove;
     border-radius: 25px;
 }
+
     .section-border:hover {
         border-color: #FFC107;
     }
@@ -369,17 +371,16 @@ html body .comments {
         html body .comments article h4 {
             display: inline-block;
             font-weight: 400;
-            margin-bottom: 25px;
         }
 
             html body .comments article h4 a {
-                color: #404040;
+                color: #5ce500;
                 text-transform: lowercase;
                 text-decoration: none;
             }
 
                 html body .comments article h4 a:hover {
-                    color: #BFBFA8;
+                    color: #9def66;
                 }
 
         html body .comments article time {
@@ -441,7 +442,6 @@ html body .comments {
 
 @media (max-width: 650px) {
     .comments {
-        border-left: 1px solid;
         width: 100%;
         padding: 0 1rem;
     }
@@ -450,25 +450,63 @@ html body .comments {
             width: 90%;
         }
 
-        .comments article #profile-photo {
-            position: relative;
-            left: -1rem;
-            display: inline-block;
-            vertical-align: middle;
-        }
+            .comments article #profile-photo {
+                position: relative;
+                left: -1rem;
+                display: inline-block;
+                vertical-align: middle;
+            }
 
-        .comments article h4 {
-            display: inline-block;
-            vertical-align: middle;
-        }
+            .comments article h4 {
+                display: inline-block;
+                vertical-align: middle;
+            }
 
-            .comments article h4 time {
-                display: block;
-                margin-left: 0 !important;
-                opacity: .5 !important;
+                .comments article h4 time {
+                    display: block;
+                    margin-left: 0 !important;
+                    opacity: .5 !important;
                 }
 }
 
 
+/* Contact form */
+
+.contact-form .form-control {
+    color: #000 !important;
+    font-size: 16px;
+    font-weight: normal;
+    height: 38px;
+    line-height: 1.42857;
+    padding: 7px 0;
+}
 
 
+.contact-form {
+    margin: 8px 0 9px !important;
+}
+
+    .contact-form input:focus, .contact-form textarea:focus {
+        border: 1px solid #5ce500 !important;
+        border-radius: 7px;
+    }
+
+input:focus, textarea:focus, select:focus {
+    outline-offset: 0px !important;
+    outline: none !important;
+}
+
+.contact-form textarea.form-control {
+    color: #000 !important;
+    height: auto;
+}
+
+.form-control, .form-group .form-control input:focus, .form-control, .form-group .form-control textarea:focus {
+    border: 1px solid #5ce500 !important;
+    border-radius: 25px;
+}
+
+input:focus, textarea:focus, select:focus {
+    outline-offset: 0px !important;
+    outline: none !important;
+}
